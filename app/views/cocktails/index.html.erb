@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="banner">
+    <h1>Cocktail Bar Playa Maria</h1>
+  </div>
+
+  <% @cocktails.each do |cocktail| %>
+  <div class="menu_card">
+    <img src="https://cdn.liquor.com/wp-content/uploads/2015/10/20001944/il_fullxfull.322976552.jpg"/>
+    <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+  </div>
+  <% end %>
+
+  <h4><%= link_to "Add a new drink", new_cocktail_path, class: "btn btn-primary" %></h4>
+</div>

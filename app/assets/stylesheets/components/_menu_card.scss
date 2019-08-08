@@ -1,0 +1,36 @@
+.menu_card {
+  overflow: hidden;
+  height: 120px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+  // .menu_card.img {
+  // width: 120px;
+  // height: 100px;
+  //  margin-right: 10px;
+  // object-fit: cover;
+
+  // }
+
+  .menu_card.h2 {
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+
+  }
+
+  .menu_card.p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
