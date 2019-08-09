@@ -1,36 +1,36 @@
-.menu_card {
-  overflow: hidden;
-  height: 120px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
 }
 
-  // .menu_card.img {
-  // width: 120px;
-  // height: 100px;
-  //  margin-right: 10px;
-  // object-fit: cover;
+.menu-card {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  img {
+    height: 128px;
+    object-fit: cover;
+    object-position: center;
+  }
 
-  // }
 
-  .menu_card.h2 {
-    display: flex;
-    font-size: 14px;
+}
+
+.menu-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-image: url("https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-repeat: no-repeat;
+  a {
+    display: inline-block;
+    margin-left: 5px;
+    color: white;
+    font-size: 26px;
+    font-family: 'Princess Sofia', cursive;
     font-weight: bold;
-    margin: 0;
-    padding: 20px;
-
   }
-
-  .menu_card.p {
-    font-size: 12px;
-    line-height: 1.4;
-    opacity: .7;
-    margin-bottom: 0;
-    margin-top: 8px;
-  }
-
+}
