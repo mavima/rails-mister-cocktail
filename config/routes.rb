@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+    root to: 'pages#index'
     resources :cocktails, only: [ :index, :new, :create, :show, :destroy] do
       resources :doses, only: [:new, :create]
-      resources :ingredient, only: [:new, :create]
+      resources :ingredient, only: :create
       resources :reviews, only: :create
 
   end

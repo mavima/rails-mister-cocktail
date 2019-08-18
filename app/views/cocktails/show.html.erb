@@ -17,7 +17,9 @@
   <% end %>
   </div>
   <div>
-    <h4><%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></h4>
+    <h4><%#= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></h4>
+
+    <%#= render 'ingredients/form', cocktail: @cocktail, ingredient: @ingredient %>
 
     <%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: 'are you sure?'}, class: "btn btn-info" %></p>
 

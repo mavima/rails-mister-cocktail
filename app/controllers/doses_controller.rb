@@ -6,6 +6,7 @@ class DosesController < ApplicationController
 
   def show
     @dose = Dose.find(params[:id])
+    # @ingredient = Ingredient.new
   end
 
   def new

@@ -1,25 +1,33 @@
-class IngredientsController < ApplicationController
+# class IngredientsController < ApplicationController
 
-  def new
-    @dose = Dose.find(params[:dose_id])
-    @ingredient = Ingredient.new
-  end
+#   def new
+#     @dose = Dose.find(params[:dose_id])
+#     @ingredient = Ingredient.new
+#   end
 
-  def create
-    @ingredient = Ingredient.new(ingredient_strong_params)
-    @dose = Dose.find(params[:dose_id])
-    @ingredient.dose = @dose
-    if @ingredient.save
-      redirect_to dose_path(@dose)
-    else
-      render :new
-    end
-  end
+#   def create
+#     @dose = Dose.find(params[:dose_id])
+#     @cocktail = Cocktail.find(params[:cocktail_id])
+#     @ingredient = Ingredient.new(ingredient_strong_params)
+#     @ingredient.dose = @dose
+#     @dose.cocktail = @cocktail
+#     if @ingredient.save
+#       respond_to do |format|
+#         format.html { redirect_to cocktail_path(@cocktail) }
+#         format.js
+#       end
+#     else
+#       respond_to do |format|
+#         format.html { redirect_to cocktails_path }
+#         format.js
+#       end
+#     end
+#   end
 
-  def ingredient_strong_params
-    params.require(:ingredient.permit(:name))
-  end
+#   def ingredient_strong_params
+#     params.require(:ingredient.permit(:name))
+#   end
 
 
 
-end
+# end
