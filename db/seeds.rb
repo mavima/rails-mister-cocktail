@@ -7,14 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'starts seeding'
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "vodka")
+Ingredient.create(name: "Lemon")
+Ingredient.create(name: "Ice")
+Ingredient.create(name: "Mint leaves")
+Ingredient.create(name: "Vodka")
 Ingredient.create(name: "Aperol")
-Ingredient.create(name: "rum")
-Ingredient.create(name: "sparkling water")
-Ingredient.create(name: "prosecco")
-Ingredient.create(name: "soda")
+Ingredient.create(name: "Rum")
+Ingredient.create(name: "Sparkling water")
+Ingredient.create(name: "Prosecco")
+Ingredient.create(name: "Soda")
+Ingredient.create(name: "Mango juice")
+Ingredient.create(name: "Orange juice")
+Ingredient.create(name: "Crushed lime")
+Ingredient.create(name: "Gin")
+Ingredient.create(name: "Elderflower juice")
+Ingredient.create(name: "Watermelon")
 
 puts 'seeding done'

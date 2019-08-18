@@ -1,0 +1,17 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0px 200px 0px;
+  background-image: url("https://beachbarbums.files.wordpress.com/2014/08/3549629124_419abb878f_z.jpg");
+    h2 {
+      color: white;
+      padding-left: 20px;
+    }
+}
+
+.show_cocktail {
+  margin: auto;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
