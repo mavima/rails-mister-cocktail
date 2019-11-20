@@ -11,8 +11,18 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   img {
     height: 128px;
+    width: 128px;
     object-fit: cover;
     object-position: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+    font-size: 28px;
   }
 
 

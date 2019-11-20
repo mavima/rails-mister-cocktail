@@ -1,0 +1,29 @@
+.edit_container {
+  margin: auto;
+  width: 600px;
+}
+
+.edit_recipe {
+  margin: auto;
+  width: 600px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+.edit_content {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .btn-info {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    justify-self: flex-end;
+  }
+}

@@ -25,6 +25,15 @@ class DosesController < ApplicationController
     end
   end
 
+  def edit
+    @cocktail = Cocktail.find(params[:cocktail_id])
+  end
+
+  def update
+    @cocktail = Cocktail.find(params[:cocktail_id])
+    @dose = Dose.new
+  end
+
   def destroy
     @dose = Dose.find(params[:id])
     @cocktail = @dose.cocktail

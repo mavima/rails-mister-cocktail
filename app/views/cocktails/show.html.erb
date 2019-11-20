@@ -1,39 +1,26 @@
-<div class="container">
-  <div class="banner">
-<h2><%= @cocktail.name  %></h2>
-</div>
-<div class="show_cocktail">
-  <div>
-  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+<div class="show_container">
+  <h2><%= @cocktail.name  %></h2>
+  <div class="show_cocktail">
+    <div>
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+    </div>
+      <br>
+      <br>
+    <div>
+      <% @cocktail.doses.each do |dose| %>
+        <p><%= dose.description %> <%= dose.ingredient.name %></p>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: 'are you sure?'}, class: "btn btn-info" %></p>
+
+      <h4><%= link_to "Change recipe", edit_cocktail_path(@cocktail), class: "btn btn-primary" %></h4>
+    </div>
   </div>
-  <br>
-  <br>
-  <div>
-  <% @cocktail.doses.each do |dose| %>
-  <p><%= dose.description %> <%= dose.ingredient.name %>
-
-    <%= link_to "Delete dose", dose_path(dose), method: :delete, data: { confirm: 'are you sure?'}, class: "btn btn-info" %></p>
-
-  <% end %>
-  </div>
-  <div>
-    <h4><%#= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></h4>
-
-    <%#= render 'ingredients/form', cocktail: @cocktail, ingredient: @ingredient %>
-
-    <%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: 'are you sure?'}, class: "btn btn-info" %></p>
-
-
-    <h4><%= link_to "Back to the list", cocktails_path, class: "btn btn-primary" %></h4>
-  </div>
-
-
-  </div>
-    <h2>
-    <%= pluralize @cocktail.reviews.size, "review" %>
-  </h2>
-
   <div id="reviews">
+    <h3>
+      <%= pluralize @cocktail.reviews.size, "review" %>
+    </h3>
     <% if @cocktail.reviews.blank? %>
       Be the first to leave a review for <%= @cocktail.name %>
     <% else %>
@@ -42,12 +29,13 @@
       <% end %>
     <% end %>
   </div>
-  <br>
+    <br>
+    <br>
 
-<%= render 'reviews/form', cocktail: @cocktail, review: @review %>
-
-
-
-  <br>
+  <%= render 'reviews/form', cocktail: @cocktail, review: @review %>
+    <br>
+  <%= link_to "Home", cocktails_path, class: "btn btn-primary" %>
+  <hr>
+</div>
 
 

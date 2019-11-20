@@ -1,0 +1,34 @@
+<div class="edit_container">
+  <h2 class="title"><%= @cocktail.name  %></h2>
+  <div class="edit_recipe ">
+
+    <div>
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+    </div>
+    <br>
+    <br>
+    <div >
+      <% @cocktail.doses.each do |dose| %>
+        <div class="edit_content">
+          <div><%= dose.description %> <%= dose.ingredient.name %></div>
+          <div><%= link_to "Delete dose", dose_path(dose), method: :delete, data: { confirm: 'are you sure?'}, class: "btn btn-info" %></div>
+        </div>
+    <% end %>
+    <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    </div>
+  </div>
+  <br>
+  <div>
+    <%= simple_form_for (@cocktail) do |f| %>
+      <%= f.input :photo, label: "Change photo:"%>
+      <%= f.input :photo_cache, as: :hidden %>
+      <div class="form-actions">
+        <%= f. button :submit, "Update photo", class: "btn btn-info" %>
+      </div>
+    <% end %>
+    <br>
+
+    <%= link_to "Home", cocktails_path, class: "btn btn-primary" %>
+
+  </div>
+</div>

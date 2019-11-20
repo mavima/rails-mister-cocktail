@@ -1,19 +1,30 @@
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 100px 0px 200px 0px;
-  background-image: url("https://beachbarbums.files.wordpress.com/2014/08/3549629124_419abb878f_z.jpg");
-    h2 {
-      color: white;
-      padding-left: 20px;
-      font-family: 'Princess Sofia', cursive;
-      font-size: 46px;
-    }
-}
-
-.show_cocktail {
+ .show_container {
+  max-width: 700px;
   margin: auto;
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
+
+
+  h2 {
+    margin-top: 20px;
+    color: black;
+    padding-left: 20px;
+    font-family: 'Princess Sofia', cursive;
+    font-size: 46px;
+  }
+
+  .show_cocktail {
+    margin: auto;
+    max-width: 700px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-family: 'Princess Sofia';
+    font-size: 26px;
+  }
+
+  .btn {
+    margin-left: 10px;
+  }
 }
